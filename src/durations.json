@@ -1,0 +1,42 @@
+{
+  "e1s1-l1": {
+    "file": "voice/e1s1-l1.wav",
+    "sec": 7.72,
+    "gain": 0.672
+  },
+  "e1s2-l1": {
+    "file": "voice/e1s2-l1.wav",
+    "sec": 12.43,
+    "gain": 0.945
+  },
+  "e1s3-l1": {
+    "file": "voice/e1s3-l1.wav",
+    "sec": 7.86,
+    "gain": 1
+  },
+  "e1s3-l2": {
+    "file": "voice/e1s3-l2.wav",
+    "sec": 4.24,
+    "gain": 0.53
+  },
+  "e1s3-l3": {
+    "file": "voice/e1s3-l3.wav",
+    "sec": 6.14,
+    "gain": 0.82
+  },
+  "e1s4-l1": {
+    "file": "voice/e1s4-l1.wav",
+    "sec": 7.21,
+    "gain": 1
+  },
+  "e1s4-l2": {
+    "file": "voice/e1s4-l2.wav",
+    "sec": 5.72,
+    "gain": 0.58
+  },
+  "e1s5-l1": {
+    "file": "voice/e1s5-l1.wav",
+    "sec": 11.72,
+    "gain": 0.656
+  }
+}

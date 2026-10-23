@@ -1,0 +1,30 @@
+{
+  "id": "jorge-e-pedro-ep01",
+  "channel": "jorge-e-pedro",
+  "series": "Ensinamentos Bíblicos",
+  "episode": 1,
+  "partTitle": "Não Temas — Isaías 41:10",
+  "video": "final/ep01-instagram-aac.mp4",
+  "videoAudioMp3": "final/ep01-audio-mp3.mp4",
+  "durationSec": 70,
+  "aiGenerated": true,
+  "status": "draft",
+  "scheduledDate": null,
+  "platforms": {
+    "youtube": {
+      "title": "Com medo do amanhã? O que a Bíblia diz 🙏 | Isaías 41:10",
+      "description": "O Jorge está com medo do que pode acontecer amanhã, e o Pastor Pedro mostra uma promessa de Deus que muda a forma de enfrentar a ansiedade. Isaías 41:10: \"Não temas, porque eu sou contigo.\"\n\nConteúdo gerado por IA.\n\n#Shorts #biblia #fe #ansiedade #isaias #versiculododia #jorgeepedro",
+      "tags": ["biblia", "fe", "ansiedade", "medo", "isaias", "versiculo", "ensinamento", "jorgeepedro"],
+      "privacy": "public",
+      "url": null
+    },
+    "instagram": {
+      "caption": "Com medo do amanhã? 🙏\nO Jorge perguntou ao Pedro se sentir medo é errado. A resposta está em Isaías 41:10: \"Não temas, porque eu sou contigo.\"\nGuarda esse versículo com você hoje e comenta se tocou seu coração. 👇\n\nConteúdo gerado por IA.\n\n#biblia #fe #ansiedade #versiculododia #isaias #ensinamento #shorts #jorgeepedro",
+      "url": null
+    },
+    "tiktok": {
+      "caption": "Com medo do amanhã? 🙏 Isaías 41:10: \"Não temas, porque eu sou contigo.\" Guarda esse versículo e comenta se tocou seu coração. Conteúdo gerado por IA. #biblia #fe #ansiedade #versiculododia #jorgeepedro",
+      "url": null
+    }
+  }
+}

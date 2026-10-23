@@ -1,0 +1,25 @@
+{
+  "name": "jorge-e-pedro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio",
+    "voices": "node scripts/build-voices.mjs",
+    "voices:edge": "node scripts/build-voices-edge.mjs",
+    "durations": "node scripts/gen-durations.mjs",
+    "render": "remotion render Ep01 out/ep01.mp4 --crf=16 --audio-bitrate=192k"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.230",
+    "@remotion/google-fonts": "4.0.230",
+    "node-edge-tts": "^1.2.11",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.230"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "typescript": "5.5.4"
+  }
+}

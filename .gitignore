@@ -1,0 +1,12 @@
+node_modules/
+out/
+voz-studio-out/
+*.log
+.env
+.voicestudio-api-key.txt
+public/voice/*.mp3
+public/voice-tests/
+public/audio/
+assets/characters/
+assets/rejected-pollinations/
+public/*.jfif

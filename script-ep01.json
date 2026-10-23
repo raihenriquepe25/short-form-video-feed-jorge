@@ -1,0 +1,97 @@
+{
+  "title": "Jorge e Pedro - Ensinamento 01: Não Temas (Isaías 41:10)",
+  "scenes": [
+    {
+      "id": "e1s1",
+      "visual": "e1hook",
+      "lines": [
+        {
+          "id": "e1s1-l1",
+          "speaker": "jorge",
+          "mood": "worried",
+          "caption": "SERÁ QUE ISSO É ERRADO?",
+          "text": "Pedro, essa semana eu fiquei com muito medo do que pode acontecer amanhã. Pra quem confia em Deus, sentir medo assim é errado?"
+        }
+      ]
+    },
+    {
+      "id": "e1s2",
+      "visual": "e1verse",
+      "lines": [
+        {
+          "id": "e1s2-l1",
+          "speaker": "pedro",
+          "mood": "warm",
+          "caption": "ISAÍAS 41:10",
+          "text": "Não é não, Jorge. Olha o que Deus promete em Isaías 41:10: Não temas, porque eu sou contigo. Não te assombres, porque eu sou teu Deus. Eu te fortaleço, e te ajudo, e te sustento com a minha mão direita."
+        }
+      ]
+    },
+    {
+      "id": "e1s3",
+      "visual": "e1explain",
+      "lines": [
+        {
+          "id": "e1s3-l1",
+          "speaker": "pedro",
+          "mood": "teaching",
+          "caption": "DEUS NÃO TIRA A TEMPESTADE",
+          "text": "Repare que Deus não promete tirar a tempestade do seu caminho. Ele promete estar com você dentro dela, te sustentando com a própria mão."
+        },
+        {
+          "id": "e1s3-l2",
+          "speaker": "jorge",
+          "mood": "curious",
+          "caption": "E SE ELA NÃO PASSAR?",
+          "text": "Mas Pedro, e se a tempestade não passar logo? O medo continua vindo."
+        },
+        {
+          "id": "e1s3-l3",
+          "speaker": "pedro",
+          "mood": "teaching",
+          "caption": "ELE SUSTENTA A CADA DIA",
+          "text": "Mesmo assim, Ele sustenta você a cada dia que ela durar. Você não enfrenta isso sozinho, nem por um segundo."
+        }
+      ]
+    },
+    {
+      "id": "e1s4",
+      "visual": "e1practice",
+      "lines": [
+        {
+          "id": "e1s4-l1",
+          "speaker": "pedro",
+          "mood": "smiling",
+          "caption": "NA PRÁTICA",
+          "text": "Na prática: quando a ansiedade vier, repete essas três palavras, eu sou contigo. Isso muda a forma como você enfrenta o seu dia."
+        },
+        {
+          "id": "e1s4-l2",
+          "speaker": "jorge",
+          "mood": "relieved",
+          "caption": "VOU LEMBRAR DISSO",
+          "text": "Eu sou contigo... Acho que agora eu entendi. Vou lembrar disso da próxima vez que o medo vier."
+        }
+      ]
+    },
+    {
+      "id": "e1s5",
+      "visual": "e1close",
+      "lines": [
+        {
+          "id": "e1s5-l1",
+          "speaker": "jorge",
+          "mood": "relieved",
+          "caption": "GUARDA ESSE VERSÍCULO",
+          "text": "Então o medo não vai embora de uma vez, mas eu não enfrento ele sozinho. Guarda esse versículo com você hoje. Se isso tocou seu coração, comenta aqui embaixo. Nos vemos no próximo ensinamento."
+        }
+      ]
+    },
+    {
+      "id": "e1end",
+      "visual": "e1end",
+      "caption": "SEGUE PRA MAIS ENSINAMENTOS",
+      "lines": []
+    }
+  ]
+}
