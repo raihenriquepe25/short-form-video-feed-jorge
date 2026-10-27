@@ -1,0 +1,97 @@
+{
+  "title": "Histórias com Jorge - Ensinamento 02: Cansado? (Mateus 11:28)",
+  "scenes": [
+    {
+      "id": "e2s1",
+      "visual": "e2hook",
+      "lines": [
+        {
+          "id": "e2s1-l1",
+          "speaker": "jorge",
+          "mood": "worried",
+          "caption": "TÔ CANSADO DE TENTAR",
+          "text": "Pedro, eu tô cansado de tentar dar conta de tudo. Na escola, em casa... parece que nunca é o bastante."
+        }
+      ]
+    },
+    {
+      "id": "e2s2",
+      "visual": "e2verse",
+      "lines": [
+        {
+          "id": "e2s2-l1",
+          "speaker": "pedro",
+          "mood": "warm",
+          "caption": "MATEUS 11:28",
+          "text": "Jesus falou com quem se sente assim, Jorge. Em Mateus 11:28 Ele diz: Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei."
+        }
+      ]
+    },
+    {
+      "id": "e2s3",
+      "visual": "e2explain",
+      "lines": [
+        {
+          "id": "e2s3-l1",
+          "speaker": "pedro",
+          "mood": "teaching",
+          "caption": "ELE CHAMA QUEM ESTÁ CANSADO",
+          "text": "Repare que Ele não chama quem já está forte. Ele chama justamente quem está cansado."
+        },
+        {
+          "id": "e2s3-l2",
+          "speaker": "jorge",
+          "mood": "curious",
+          "caption": "COMO EU CHEGO ATÉ ELE?",
+          "text": "Mas como eu chego até Ele, Pedro?"
+        },
+        {
+          "id": "e2s3-l3",
+          "speaker": "pedro",
+          "mood": "teaching",
+          "caption": "DO JEITO QUE VOCÊ ESTÁ",
+          "text": "Conversando, do jeito que você está. Sem precisar arrumar as palavras."
+        }
+      ]
+    },
+    {
+      "id": "e2s4",
+      "visual": "e2practice",
+      "lines": [
+        {
+          "id": "e2s4-l1",
+          "speaker": "pedro",
+          "mood": "smiling",
+          "caption": "NA PRÁTICA",
+          "text": "Hoje, antes de dormir, conta pra Ele o que te cansou. Sem pressa, sem medo de falar errado."
+        },
+        {
+          "id": "e2s4-l2",
+          "speaker": "jorge",
+          "mood": "relieved",
+          "caption": "NÃO PRECISO DAR CONTA SOZINHO",
+          "text": "Então eu não preciso dar conta de tudo sozinho."
+        }
+      ]
+    },
+    {
+      "id": "e2s5",
+      "visual": "e2close",
+      "lines": [
+        {
+          "id": "e2s5-l1",
+          "speaker": "jorge",
+          "mood": "relieved",
+          "caption": "GUARDA ESSE VERSÍCULO",
+          "text": "Descansar Nele também é um jeito de confiar. Guarda esse versículo com você hoje e comenta aqui embaixo se tocou seu coração. Nos vemos no próximo ensinamento."
+        }
+      ]
+    },
+    {
+      "id": "e2end",
+      "visual": "e2end",
+      "caption": "SEGUE PRA MAIS ENSINAMENTOS",
+      "lines": []
+    }
+  ]
+}

@@ -1,5 +1,7 @@
-import script from "../script-ep01.json";
-import durations from "./durations.json";
+import script01 from "../script-ep01.json";
+import script02 from "../script-ep02.json";
+import durations01 from "./durations-ep01.json";
+import durations02 from "./durations-ep02.json";
 
 export const FPS = 30;
 export const PAUSE_SEC = 0.45;
@@ -20,30 +22,49 @@ export type LineItem = {
   isVerse: boolean;
 };
 
-const d = durations as Record<string, { file: string; sec: number; gain: number }>;
+export type Timeline = {
+  lines: LineItem[];
+  endCaption: string;
+  endFrom: number;
+  endFrames: number;
+  totalFrames: number;
+  brand: string;
+};
 
-let cursor = 0;
-export const lines: LineItem[] = [];
-for (const scene of script.scenes as any[]) {
-  for (const l of scene.lines) {
-    const frames = Math.ceil((d[l.id].sec + PAUSE_SEC) * FPS);
-    lines.push({
-      id: l.id,
-      speaker: l.speaker,
-      mood: l.mood,
-      caption: l.caption,
-      text: l.text,
-      audio: d[l.id].file,
-      gain: d[l.id].gain,
-      from: cursor,
-      frames,
-      isVerse: scene.visual === "e1verse",
-    });
-    cursor += frames;
+type Durations = Record<string, { file: string; sec: number; gain: number }>;
+
+export function buildTimeline(script: any, durations: Durations, brand: string): Timeline {
+  let cursor = 0;
+  const lines: LineItem[] = [];
+  for (const scene of script.scenes as any[]) {
+    for (const l of scene.lines) {
+      const frames = Math.ceil((durations[l.id].sec + PAUSE_SEC) * FPS);
+      lines.push({
+        id: l.id,
+        speaker: l.speaker,
+        mood: l.mood,
+        caption: l.caption,
+        text: l.text,
+        audio: durations[l.id].file,
+        gain: durations[l.id].gain,
+        from: cursor,
+        frames,
+        isVerse: /verse$/.test(scene.visual),
+      });
+      cursor += frames;
+    }
   }
+  const endFrames = Math.ceil(END_SEC * FPS);
+  return {
+    lines,
+    endCaption: (script.scenes as any[]).find((s) => /end$/.test(s.visual))?.caption ?? "",
+    endFrom: cursor,
+    endFrames,
+    totalFrames: cursor + endFrames,
+    brand,
+  };
 }
 
-export const endCaption: string = (script.scenes as any[]).find((s) => s.visual === "e1end")?.caption ?? "";
-export const endFrom = cursor;
-export const endFrames = Math.ceil(END_SEC * FPS);
-export const totalFrames = endFrom + endFrames;
+export const tl01 = buildTimeline(script01, durations01 as Durations, "JORGE & PEDRO");
+
+export const tl02 = buildTimeline(script02, durations02 as Durations, "HISTÓRIAS COM JORGE");

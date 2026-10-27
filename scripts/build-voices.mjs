@@ -7,10 +7,11 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from
 import { join, basename } from "node:path";
 import { callTool } from "./vs-client.mjs";
 
-const script = JSON.parse(readFileSync("script-ep01.json", "utf8"));
+const ep = process.argv[2] || "01"; // uso: node scripts/build-voices.mjs 02
+const script = JSON.parse(readFileSync(`script-ep${ep}.json`, "utf8"));
 const OUT = "public/voice";
-// Pasta-base do MCP (OMNIVOICE_MCP_BASE_PATH): o backend já no ar foi iniciado a partir do MCP 5.
-const BASE = process.env.VS_BASE || "../MCP 5/voz-studio-out";
+// Pasta-base do MCP (OMNIVOICE_MCP_BASE_PATH), definida em scripts/voicestudio-start.ps1.
+const BASE = process.env.VS_BASE || "voz-studio-out";
 const STEPS = Number(process.env.VS_STEPS || 16);
 mkdirSync(OUT, { recursive: true });
 

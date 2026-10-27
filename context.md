@@ -326,3 +326,10 @@ Decisões finais que **substituem** o que está nas seções 0–5 acima onde ho
 - **2026-10-22 noite**: vozes do VoiceStudio geradas (8 falas, `public/voice/*.wav`) e vídeo renderizado: `out/ep01-vs.mp4`
   (70 s, trilha + sino + volumes equalizados por fala via `gain` em `src/durations.json`). Pendente: `jorge-relieved`
   (imagem do Jorge sorrindo, ainda cópia de `jorge-curious`), ouvir/aprovar as vozes, revisar ritmo.
+- **2026-10-26**: canal renomeado para **Histórias com Jorge** (logo/banner em `brand/`, gerados por código em `src/Brand.tsx`).
+  Código agora multi-episódio: `src/Episode.tsx` + `src/timeline.ts` (`tl01`, `tl02`), composições `Ep01`/`Ep02` em `src/Root.tsx`.
+  Durações por episódio: `src/durations-epNN.json` (`node scripts/gen-durations.mjs NN`; `--estimate` antes das vozes existirem).
+  **Ep02 (Mateus 11:28, "Cansado?")**: roteiro `script-ep02.json` aprovado; vozes em geração via
+  `node scripts/build-voices.mjs 02` (log `out/voices02.log`; usa os perfis clonados jorge/pedro de `public/voice/progress.json`).
+  Backend VoiceStudio sobe com `powershell -File scripts/voicestudio-start.ps1` (base de áudio `voz-studio-out/`).
+  Próximo: `node scripts/gen-durations.mjs 02` -> `npm run render:ep02` -> `final/` + `episodes/ep02.json` (draft) -> push.

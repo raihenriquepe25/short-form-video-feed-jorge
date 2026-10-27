@@ -1,7 +1,12 @@
-// Mede a duração (s) de cada fala em public/voice (.wav ou .mp3) e grava src/durations.json.
+// Uso: node scripts/gen-durations.mjs [NN] [--estimate]
+// Mede a duração (s) e o ganho de cada fala em public/voice (.wav ou .mp3) e grava src/durations-epNN.json.
+// --estimate: antes das vozes existirem, grava uma estimativa (15 caracteres/s) só pra o projeto compilar.
 import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
 
-const script = JSON.parse(readFileSync("script-ep01.json", "utf8"));
+const args = process.argv.slice(2);
+const ep = args.find((a) => /^\d+$/.test(a)) ?? "01";
+const estimate = args.includes("--estimate");
+const script = JSON.parse(readFileSync(`script-ep${ep}.json`, "utf8"));
 
 function wavSeconds(buf) {
   const rate = buf.readUInt32LE(24);
@@ -39,8 +44,9 @@ for (const scene of script.scenes) {
     const mp3 = `public/voice/${line.id}.mp3`;
     if (existsSync(wav)) { const b = readFileSync(wav); out[line.id] = { file: `voice/${line.id}.wav`, sec: +wavSeconds(b).toFixed(3), gain: wavGain(b) }; }
     else if (existsSync(mp3)) out[line.id] = { file: `voice/${line.id}.mp3`, sec: +((statSync(mp3).size * 8) / 48000).toFixed(3), gain: 1 }; // Edge-TTS: 48 kbps
+    else if (estimate) out[line.id] = { file: `voice/${line.id}.wav`, sec: +(line.text.length / 15).toFixed(2), gain: 1, estimated: true };
     else throw new Error(`sem áudio para ${line.id}`);
   }
 }
-writeFileSync("src/durations.json", JSON.stringify(out, null, 2));
-console.log(out);
+writeFileSync(`src/durations-ep${ep}.json`, JSON.stringify(out, null, 2));
+console.log(`src/durations-ep${ep}.json`, out);

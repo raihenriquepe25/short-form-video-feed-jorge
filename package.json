@@ -7,7 +7,8 @@
     "voices": "node scripts/build-voices.mjs",
     "voices:edge": "node scripts/build-voices-edge.mjs",
     "durations": "node scripts/gen-durations.mjs",
-    "render": "remotion render Ep01 out/ep01.mp4 --crf=16 --audio-bitrate=192k"
+    "render": "remotion render Ep01 out/ep01.mp4 --crf=16 --audio-bitrate=192k",
+    "render:ep02": "remotion render Ep02 out/ep02.mp4 --crf=18 --audio-bitrate=192k"
   },
   "dependencies": {
     "@remotion/cli": "4.0.230",

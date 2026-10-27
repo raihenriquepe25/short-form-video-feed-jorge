@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, Img, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Nunito";
-import { endCaption, endFrames, endFrom, lines, LineItem } from "./timeline";
+import { LineItem, Timeline } from "./timeline";
 
 const { fontFamily } = loadFont("normal", { weights: ["700", "800"], subsets: ["latin", "latin-ext"] });
 
@@ -145,15 +145,15 @@ const Line: React.FC<{ item: LineItem }> = ({ item }) => {
   );
 };
 
-const EndCard: React.FC = () => {
+const EndCard: React.FC<{ caption: string; brand: string }> = ({ caption, brand }) => {
   const frame = useCurrentFrame();
   const o = interpolate(frame, [0, 15], [0, 1], { extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ opacity: o, background: "linear-gradient(180deg,#1d2f3a 0%, #2c6a8a 55%, #c98a1b 140%)" }}>
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", flexDirection: "column", gap: 40 }}>
-        <div style={{ fontFamily, fontWeight: 800, fontSize: 92, color: COLORS.cream, letterSpacing: 4 }}>JORGE & PEDRO</div>
+        <div style={{ fontFamily, fontWeight: 800, fontSize: 92, color: COLORS.cream, letterSpacing: 4, textAlign: "center" }}>{brand}</div>
         <div style={{ fontFamily, fontWeight: 800, fontSize: 60, color: COLORS.ink, background: COLORS.gold, padding: "20px 44px", borderRadius: 22, textAlign: "center", maxWidth: 900 }}>
-          {endCaption}
+          {caption}
         </div>
         <div style={{ fontFamily, fontWeight: 700, fontSize: 34, color: "rgba(255,248,234,0.7)" }}>Conteúdo gerado por IA</div>
       </AbsoluteFill>
@@ -161,7 +161,8 @@ const EndCard: React.FC = () => {
   );
 };
 
-export const Ep01: React.FC = () => {
+export const Episode: React.FC<{ tl: Timeline }> = ({ tl }) => {
+  const { lines, endCaption, endFrames, endFrom, brand } = tl;
   const { durationInFrames } = useVideoConfig();
   const verse = lines.find((l) => l.isVerse);
   return (
@@ -181,10 +182,10 @@ export const Ep01: React.FC = () => {
         </Sequence>
       ))}
       <Sequence from={endFrom} durationInFrames={endFrames}>
-        <EndCard />
+        <EndCard caption={endCaption} brand={brand} />
       </Sequence>
       <div style={{ position: "absolute", bottom: 70, width: "100%", textAlign: "center", fontFamily, fontWeight: 800, fontSize: 28, letterSpacing: 4, color: "rgba(255,248,234,0.55)" }}>
-        JORGE & PEDRO
+        {brand}
       </div>
     </AbsoluteFill>
   );
